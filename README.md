@@ -1,5 +1,12 @@
 # SnapDragon Hackathon - Interactive Avatar
 
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=flat-square&logo=tailwind-css)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat-square&logo=vercel)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
 ## Overview
 
 This project showcases the implementation of HeyGen's [Interactive Streaming Avatar](https://docs.heygen.com/docs/streaming-api) service in a Next.js application. It serves as both a demonstration and a starting point for building advanced avatar-based interactive applications.
@@ -32,28 +39,97 @@ https://github.com/agmmnn/streaming-avatar-playground/assets/16024979/76c08640-1
 - **Package Manager:** Bun
 https://api.heygen.com/v1/streaming/avatar.list
 
+
+
+## Architecture
+
+```mermaid
+graph TD
+    A[Client Browser] --> B[Next.js Frontend]
+    B --> C[API Routes]
+    C --> D[HeyGen API]
+    C --> E[LLM Services]
+    B --> F[State Management/Jotai]
+    F --> G[UI Components]
+    G --> H[Avatar Stream]
+    G --> I[Chat Interface]
+```
+
+## Project Structure
+
+```
+interactive-avatar-playground/
+├── app/
+│   ├── api/
+│   │   └── chat/
+│   │       └── route.ts
+│   ├── components/
+│   │   ├── avatar/
+│   │   ├── chat/
+│   │   └── ui/
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── store/
+│   │   └── atoms.ts
+│   ├── layout.tsx
+│   └── page.tsx
+├── public/
+│   └── assets/
+├── styles/
+│   └── globals.css
+├── types/
+│   └── index.ts
+└── package.json
+```
+
 ## Getting Started
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/interactive-avatar-playground.git
-cd interactive-avatar-playground
+git clone https://github.com/diyakamboj/snap-dragon-hackathon.git
+cd snap-dragon-hackathon
 ```
+
 
 2. Install dependencies:
 
 ```bash
-bun install
+npm install
 ```
 
-3. Start the development server:
+3. Create environment file:
 
 ```bash
-bun dev
+cp .env.example .env
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Update environment variables in `.env`:
+
+```env
+# Required API keys and configurations
+HEYGEN_API_KEY=your_api_key_here
+```
+
+5. Start development server:
+
+```bash
+npm run dev
+```
+
+6. Build for production:
+
+```bash
+npm run build
+```
+
+7. Start production server:
+
+```bash
+npm start
+```
+
+8. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Configuration
 

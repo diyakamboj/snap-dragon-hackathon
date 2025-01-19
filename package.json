@@ -1,6 +1,6 @@
 {
-  "name": "interactive-avatar-playground",
-  "version": "0.1.0",
+  "name": "snap-dragon-hackathon",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
