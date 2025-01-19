@@ -152,8 +152,6 @@ Deploy easily on [Vercel](https://vercel.com/new?utm_medium=default-template&fil
 
 ## License
 
-This project is MIT licensed.
-
 Portions of this code are copyright of their respective authors and released
 under the MIT license:
 - (https://github.com/agmmnn/interactive-avatar-playground/) - agmmnn
