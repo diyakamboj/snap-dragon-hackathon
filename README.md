@@ -1,4 +1,4 @@
-# SnapDragon Hackathon - Interactive Avatar
+# Interactive Avatar App
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
 ![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)
